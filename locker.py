@@ -28,7 +28,7 @@ def logo():
 {yel}	|{red}  b   {prple}Type Password       {yel}  |
 {yel}        |____________________________|
 
-  {cyan}Your IP Adress :{grn} {IP}
+  {cyan}Your IP Address :{grn} {IP}
   {cyan}Device         :{grn}{dev}
   {res}
   
