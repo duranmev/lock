@@ -34,7 +34,7 @@ def logo():
   
   {cyan}copy your code.
   
-  {cyan}Your Code         {grn}{code}
+       {grn}{code}
   {res}
   
   """)
