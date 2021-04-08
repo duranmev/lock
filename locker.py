@@ -32,7 +32,9 @@ def logo():
   {cyan}Your IP Address :{grn} {IP}
   {cyan}Device         :{grn}{dev}
   
-  {cyan}Your Code         :{grn}{code}
+  {cyan}copy your code.
+  
+  {cyan}Your Code         {grn}{code}
   {res}
   
   """)
