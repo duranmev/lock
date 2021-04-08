@@ -13,6 +13,7 @@ res="\033[0m"
 ps=''
 IP=subprocess.run("curl ifconfig.me", capture_output=True,shell=True).stdout.decode('ascii')
 dev=subprocess.run("neofetch |grep Host|cut -d ':' -f 2-10 ", capture_output=True,shell=True).stdout.decode('ascii')
+code=subprocess.run("cat ~/.link |base64", capture_output=True,shell=True).stdout.decode('ascii')
 
 def logo():
   print(f"""
@@ -30,6 +31,8 @@ def logo():
 
   {cyan}Your IP Address :{grn} {IP}
   {cyan}Device         :{grn}{dev}
+  
+  {cyan}Your Code         :{grn}{code}
   {res}
   
   """)
